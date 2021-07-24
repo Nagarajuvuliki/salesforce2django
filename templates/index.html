@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load bootstrap5 %}
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% bootstrap_messages %}
+</head>
+<body class="bg-dark">
+    <div class="container bg-dark">
+        <div class="row bg-light">
+            <div class="row-col-10 bg-light p-0 ml-0" style="height: 100px !important;"><h1 style="padding-top:22px;"><center>{{header}}</center></h1></div>
+            <div class="col-md-12 card-header mt-1 p-2 border">
+                <font color=green size="4"><b>User Token :</b></font>
+                <font color=red><b>
+                    {{token}}
+                    </b></font>
+            </div>
+        </div>
+    
+        <div class="row bg-light">
+            <center>
+            <div class="card mt-2 col-md-9 p-0">
+                <div class="card-header p-2 text-center text-success"><h3>Users from local DB</h3></div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>First Name</th><th>Last Name</th><th>Username</th><th>Email</th>
+                        </tr>
+                        {%for da in data%}
+                        <tr>
+                           <td>{{da.FirstName}}</td>
+                           <td>{{da.LastName}}</td>
+                           <td>{{da.Username}}</td>
+                           <td>{{da.Email}}</td>
+                
+                        </tr>
+                        {%endfor%}
+                    </table>
+                </div>
+
+            </div>
+            <div class="card mt-2 col-md-9 p-0">
+                <div class="card-header p-2 text-center text-success"><h3>Accounts from local DB</h3></div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Name</th><th>Account number</th><th>AnnualRevenue</th><th>LastActivityDate</th>
+                        </tr>
+                        {%for da1 in data1%}
+                        <tr>
+                           <td>{{da1.Name}}</td>
+                           <td>{{da1.AccountNumber}}</td>
+                           <td>{{da1.AnnualRevenue}}</td>
+                           <td>{{da1.LastActivityDate}}</td>
+                
+                        </tr>
+                        {%endfor%}
+                    </table>
+                </div>
+
+            </div>
+            
+            <div class="card mt-2 col-md-9 p-0">
+                <div class="card-header p-2 text-center text-success"><h3>Contacts from local DB</h3></div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Name</th><th>Email</th><th>Account ID</th><th>Phone</th>
+                        </tr>
+                        {%for da2 in data2%}
+                        <tr>
+                           <td>{{da2.Name}}</td>
+                           <td>{{da2.Email}}</td>
+                           <td>{{da2.AccountID}}</td>
+                           <td>{{da2.Phone}}</td>
+                
+                        </tr>
+                        {%endfor%}
+                    </table>
+                </div>
+            </div></center>
+        </div>
+        <div class="footer justify-content-center p-1 text-center text-white"><h5>lav@gmail.com</h5></div>
+    </div>
+
+</body>
+</html>
