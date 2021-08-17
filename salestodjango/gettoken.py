@@ -6,7 +6,7 @@ def get_token():
         "grant_type": "password",
         "client_id": "3MVG9fe4g9fhX0E52uj8SdOHGubOlhne1nRq6GeYugQQqnJhX5ChSsHyZbVliHKZXAZSjbJUc9DgLpAAAtX7L",
         "client_secret": "6FD4DF54C15ED3FF82BDCED744C5FDD67179B728A7E1460BDAD01DE2E2424D32",
-        "username": "nagarajuvuliki@lav.com",
+        "username": "",
         "password": "nagaswrn1hhTf8InXk4kKl8wP6tMtQ6tO" 
     }
     r = requests.post("https://login.salesforce.com/services/oauth2/token", params=login_details)
